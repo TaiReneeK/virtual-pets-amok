@@ -77,5 +77,14 @@ public class DogTest
 		assertEquals(5, checkWaste);
 		assertEquals(15, checkHappiness);
 	}
+	
+	@Test
+	public void shouldHaveHealthDecreaseBy5DueToHungerLevel()
+	{
+		anyDog.reduceHealth();
+		int checkHealth = anyDog.getHealth();
+		assertEquals(5, checkHealth);
+	}
+	
 
 }
