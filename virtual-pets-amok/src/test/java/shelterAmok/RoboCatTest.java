@@ -27,13 +27,13 @@ RoboCat anyRoboCat = new RoboCat("name", 10, 10, 10, 10, "description");
 	}
 	
 	@Test
-	public void shouldDecreaseBoredomAndDecreaseOilLevelByPlayOf5()
+	public void shouldDecreaseBoredomAndDecreaseOilLevelByPlay()
 	{
 		anyRoboCat.playPet();
 		int checkBoredom = anyRoboCat.getBoredom();
 		int checkOilLevel = anyRoboCat.getOilLevel();
 		assertEquals(5, checkBoredom);
-		assertEquals(5, checkOilLevel);
+		assertEquals(7, checkOilLevel);
 	}
 	
 	@Test
@@ -49,7 +49,7 @@ RoboCat anyRoboCat = new RoboCat("name", 10, 10, 10, 10, "description");
 	{
 		anyRoboCat.increaseOilLevel();
 		int checkOilLevel = anyRoboCat.getOilLevel();
-		assertEquals(15, checkOilLevel);
+		assertEquals(30, checkOilLevel);
 	}
 	
 	@Test
@@ -57,6 +57,6 @@ RoboCat anyRoboCat = new RoboCat("name", 10, 10, 10, 10, "description");
 	{
 		anyRoboCat.reduceOilLevel();
 		int checkOilLevel = anyRoboCat.getOilLevel();
-		assertEquals(5, checkOilLevel);
+		assertEquals(7, checkOilLevel);
 	}
 }

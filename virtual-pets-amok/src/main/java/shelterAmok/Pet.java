@@ -1,19 +1,13 @@
 package shelterAmok;
 
-public abstract class Pet 
+public abstract class Pet
 {
 
-	public String getDescription;
 	protected String name;
 	protected int boredom;
 	protected int health;
 	protected int happiness;
 	protected String description;
-
-	public Pet() 
-	{
-		super();
-	}
 
 	public String getName() 
 	{
@@ -41,6 +35,10 @@ public abstract class Pet
 	}
 
 	public abstract void playPet();
+	
+	public abstract void displayStats();
+	
+	public abstract void tick();
 
 	public void reduceHealth() 
 	{

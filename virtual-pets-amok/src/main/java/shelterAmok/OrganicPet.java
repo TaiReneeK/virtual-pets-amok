@@ -1,11 +1,20 @@
 package shelterAmok;
 
+import java.util.Random;
+
 public abstract class OrganicPet extends Pet
 {
+	Random rand = new Random();
 
 	protected int hunger;
 	protected int thirst;
 	protected int waste;
+	
+	/*A boolean method to help check the ranges on numbers you can use it to check ranges and stop from going over or under.
+	public static boolean rangeCheck(int bot, int top)
+	  {
+		return hunger > bot && hunger <= top ;	
+	  }*/
 
 	public OrganicPet() 
 	{
@@ -14,6 +23,7 @@ public abstract class OrganicPet extends Pet
 
 	public int getHunger() 
 	{
+		
 		return hunger;
 	}
 
@@ -30,16 +40,16 @@ public abstract class OrganicPet extends Pet
 	public void feedPet() 
 	{
 		hunger -= 5;
+		waste += 5;
 	}
 
 	public void waterPet() 
 	{
-		thirst -= 5;
+		thirst -= 15;
 	}
 
 	public void cleanWaste() 
-	{
-		waste = 0;
+	{waste = 0;
 	}
 	
 	@Override
@@ -48,6 +58,19 @@ public abstract class OrganicPet extends Pet
 		boredom -= 5;
 		thirst += 5;
 		hunger += 5;
+		happiness += 5;
+	}
+	
+	public void tick()
+	{
+		waste += rand.nextInt(9);
+		thirst += rand.nextInt(9);
 	}
 
+	public void displayStats()
+	{
+		System.out.println("Name: " + name + " Hunger: " + hunger + " || " +
+				" Thirst: " + thirst + " || " + " Boredom: " + boredom + " || " + " Waste: " + 
+				waste + " || " + " Health: " + health + " || " + " Happiness: " + happiness);
+	}
 }

@@ -33,7 +33,7 @@ public class RoboDogTest
 		int checkBoredom = anyRoboDog.getBoredom();
 		int checkOilLevel = anyRoboDog.getOilLevel();
 		assertEquals(5, checkBoredom);
-		assertEquals(5, checkOilLevel);
+		assertEquals(7, checkOilLevel);
 	}
 	
 	@Test
@@ -53,18 +53,18 @@ public class RoboDogTest
 	}
 	
 	@Test
-	public void shouldIncreaseOilLevelTo15AfterMaintenanceOf5()
+	public void shouldIncreaseOilLevelTo30AfterMaintenance()
 	{
 		anyRoboDog.increaseOilLevel();
 		int checkOilLevel = anyRoboDog.getOilLevel();
-		assertEquals(15, checkOilLevel);
+		assertEquals(30, checkOilLevel);
 	}
 	
 	@Test
-	public void shouldDecreaseOilLevelTo5AfterOilReductionOf5()
+	public void shouldDecreaseOilLevelTo5AfterOilReductionOf3()
 	{
 		anyRoboDog.reduceOilLevel();
 		int checkOilLevel = anyRoboDog.getOilLevel();
-		assertEquals(5, checkOilLevel);
+		assertEquals(7, checkOilLevel);
 	}
 }

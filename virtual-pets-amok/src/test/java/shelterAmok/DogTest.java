@@ -8,10 +8,10 @@ import org.junit.Test;
 
 public class DogTest 
 {
-	Dog anyDog = new Dog("name", 10, 10, 10, 10, 10, 10, "description" );
+	Dog anyDog = new Dog("name", 10, 25, 10, 10, 10, 10, "description" );
 
 	@Test
-	public void shouldTenderProperDogProperties()
+	public void shouldRenderProperDogProperties()
 	{
 		String name = anyDog.getName();
 		int hunger = anyDog.getHunger();
@@ -24,7 +24,7 @@ public class DogTest
 		
 		assertEquals("name", name);
 		assertEquals(10, hunger);
-		assertEquals(10, thirst);
+		assertEquals(25, thirst);
 		assertEquals(10, boredom);
 		assertEquals(10, waste);
 		assertEquals(10, health);
@@ -45,7 +45,7 @@ public class DogTest
 	{
 		anyDog.waterPet();
 		int checkThirst = anyDog.getThirst();
-		assertEquals(5, checkThirst);
+		assertEquals(10, checkThirst);
 	}
 	
 	@Test
@@ -56,7 +56,7 @@ public class DogTest
 		int checkThirst = anyDog.getThirst();
 		int checkBoredom = anyDog.getBoredom();
 		assertEquals(15, checkHunger);
-		assertEquals(15, checkThirst);
+		assertEquals(30, checkThirst);
 		assertEquals(5, checkBoredom);
 	}
 	

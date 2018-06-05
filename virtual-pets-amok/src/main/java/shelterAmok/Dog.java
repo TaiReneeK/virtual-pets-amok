@@ -21,6 +21,5 @@ public class Dog extends OrganicPet implements WalkDogs
 		waste -= 5;
 		happiness += 5;
 	}
-
-
+	
 }

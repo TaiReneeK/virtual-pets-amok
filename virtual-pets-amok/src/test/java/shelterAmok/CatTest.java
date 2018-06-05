@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class CatTest 
 {
-	Cat anyCat = new Cat("name", 10, 10, 10, 10, 10, 10, "description" );
+	Cat anyCat = new Cat("name", 10, 25, 10, 10, 10, 10, "description" );
 
 	@Test
 	public void shouldTenderProperDogProperties()
@@ -22,7 +22,7 @@ public class CatTest
 		
 		assertEquals("name", name);
 		assertEquals(10, hunger);
-		assertEquals(10, thirst);
+		assertEquals(25, thirst);
 		assertEquals(10, boredom);
 		assertEquals(10, waste);
 		assertEquals(10, health);
@@ -39,11 +39,11 @@ public class CatTest
 	}
 	
 	@Test
-	public void shouldDecreaseThirstBy5AfterWaterOf5()
+	public void shouldDecreaseThirstBy15AfterWatering()
 	{
 		anyCat.waterPet();
 		int checkThirst = anyCat.getThirst();
-		assertEquals(5, checkThirst);
+		assertEquals(10, checkThirst);
 	}
 	
 	@Test
@@ -54,7 +54,7 @@ public class CatTest
 		int checkThirst = anyCat.getThirst();
 		int checkBoredom = anyCat.getBoredom();
 		assertEquals(15, checkHunger);
-		assertEquals(15, checkThirst);
+		assertEquals(30, checkThirst);
 		assertEquals(5, checkBoredom);
 	}
 	

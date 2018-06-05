@@ -1,6 +1,6 @@
 package shelterAmok;
 
-public interface WalkDogs 
+public interface WalkDogs
 {
 	void walk();
 }
