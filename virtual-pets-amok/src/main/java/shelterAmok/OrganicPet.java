@@ -9,12 +9,6 @@ public abstract class OrganicPet extends Pet
 	protected int hunger;
 	protected int thirst;
 	protected int waste;
-	
-	/*A boolean method to help check the ranges on numbers you can use it to check ranges and stop from going over or under.
-	public static boolean rangeCheck(int bot, int top)
-	  {
-		return hunger > bot && hunger <= top ;	
-	  }*/
 
 	public OrganicPet() 
 	{

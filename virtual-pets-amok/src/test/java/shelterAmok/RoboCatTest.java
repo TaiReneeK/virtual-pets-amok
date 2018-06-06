@@ -59,4 +59,12 @@ RoboCat anyRoboCat = new RoboCat("name", 10, 10, 10, 10, "description");
 		int checkOilLevel = anyRoboCat.getOilLevel();
 		assertEquals(7, checkOilLevel);
 	}
+	
+	@Test
+	public void robotMaintenanceShouldIncreaseOilLevelBy20()
+	{
+		anyRoboCat.robotMaintenance();
+		int checkOilLevel = anyRoboCat.getOilLevel();
+		assertEquals(30, checkOilLevel);
+	}
 }

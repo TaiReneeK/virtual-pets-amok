@@ -55,14 +55,6 @@ public class Shelter
 		}
 	}
 	
-	public void maintainRobots()
-	{
-		for(Pet pets : pets.values())
-		{
-			((RoboticPet) pets).robotMaintenance();
-		}
-	}
-	
 	public void feedAllOrganic()
 	{
 		for(Pet pets : pets.values())
@@ -108,7 +100,7 @@ public class Shelter
 		}
 	}
 	
-	public void playWithAllPets()
+	public void playWithPet()
 	{
 		for(Pet pets : pets.values())
 		{
@@ -131,6 +123,17 @@ public class Shelter
 			if(pets instanceof OrganicPet)
 			{
 				pets.displayStats();
+			}
+		}
+	}
+	
+	public void oiling()
+	{
+		for(Pet pets : pets.values())
+		{
+			if(pets instanceof RoboticPet)
+			{
+				((RoboticPet) pets).increaseOilLevel();
 			}
 		}
 	}

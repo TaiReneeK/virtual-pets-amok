@@ -34,7 +34,7 @@ public class ShelterAmokApp
 		System.out.println("Type \"Admit\" to admit a pet");
 		System.out.println("Type \"Adopt\" to adopt a pet");
 		System.out.println("Type \"Display\" to display pet stats");
-		System.out.println("Type \"Play\" to play with all pets");
+		System.out.println("Type \"Play\" to play choose a pet to play with");
 		System.out.println("Type \"Walk\" to walk all dogs");
 		System.out.println("Type \"Organic\" to see organic pet care options");
 		System.out.println("Type \"Robot\" for robot maintenance");
@@ -121,9 +121,13 @@ public class ShelterAmokApp
 		
 		if(choice.equalsIgnoreCase("Play"))
 		{
-			myShelter.playWithAllPets();
+			myShelter.showAllPets();
+			System.out.println("Choose a pet to play with!");
+			String name = input.nextLine();
+			myShelter.findPet(name);
+			myShelter.playWithPet();
 			System.out.println();
-			System.out.println("You chose to play with the pets!");
+			System.out.println("You chose to play with " + name + "!");
 		}
 		
 		if(choice.equalsIgnoreCase("Walk"))
@@ -131,6 +135,12 @@ public class ShelterAmokApp
 			myShelter.walkDogs();
 			System.out.println("It took a while but you have walked all of the dogs!");
 			System.out.println("Thank you");
+		}
+		
+		if(choice.equalsIgnoreCase("Robot"))
+		{
+			myShelter.oiling();
+			System.out.println("You oiled the robots!");
 		}
 		
 		if(choice.equalsIgnoreCase("Organic"))
@@ -181,10 +191,6 @@ public class ShelterAmokApp
 			while (!choice.equalsIgnoreCase("Back"));
 		}
 		
-		if(choice.equalsIgnoreCase("Robot"))
-		{
-			System.out.println("You oiled the robots!");
-		}
 		
 		if(choice.equalsIgnoreCase("Exit"))
 		{
