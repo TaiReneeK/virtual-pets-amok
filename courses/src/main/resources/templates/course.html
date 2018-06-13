@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>A course</title>
+</head>
+<body>
+	<h1>A Single Course</h1>
+
+	<div th:each = "course: ${courses}">
+		<p th:test = "${course.name}"></p>
+		<p th:test = "${course.description}"></p>
+		<a href="http://localhost:8080/show-courses">Back to home</a>
+	</div>
+
+
+</body>
+</html>
