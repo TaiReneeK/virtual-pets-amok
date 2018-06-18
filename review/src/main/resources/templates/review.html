@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>A Review</title>
+</head>
+<body>
+<style>
+h1 {
+	text-align: center;
+	}
+
+h2 {
+	font-family: Snell Roundhand, cursive;
+
+	text-align: center;
+
+	color: #483D8B;
+	}
+body {
+		border-left-style: solid;
+
+		border-left-color: #008B8B;
+
+		border-left-width: 5px;
+
+		text-align: right;
+
+	}
+</style>
+	<h1>Movie Review</h1>
+
+	<div th:each = "review: ${reviews}">
+		<h2 th:text = "${review.name}"></h2>
+		<img th:src = "${review.image}"></img>
+		<p th:text = "${review.category}"></p>
+		<p th:text = "${review.date}"></p>
+		<p th:text = "${review.content}"></p>
+		<a href="http://localhost:8080/show-reviews">Back to home</a>
+	</div>
+
+</body>
+</html>
