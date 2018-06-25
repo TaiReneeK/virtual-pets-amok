@@ -1,0 +1,178 @@
+.grid-container 
+{
+  display: grid;
+  grid-template-columns: 250px auto auto auto;
+  grid-template-rows: 100px auto auto auto auto;
+  background-color: #F0F8FF;
+  padding: 10px;
+  max-width: 1000px;
+  width: 90%;
+  margin: 2rem auto;
+}
+.grid-item 
+{
+  align-items: center;
+  background-color: #F8F8FF;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  display: flex;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.header
+{
+	display: flex;
+	grid-column: 1/-1;
+	justify-content: space-between;
+}
+
+#logo
+{
+	font-family: shrikhand;
+	font-size: 38px;
+	text-shadow: 3px -1px 4px rgba(150, 150, 150, 1);
+}
+
+.nav
+{
+	align-items: flex-start;
+	display: flex;
+	grid-row: 2/5;
+}
+
+nav ul
+{
+  background-color: #f1f1f1;
+  font-size: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}
+
+nav li a
+{
+	color: black;
+	display: block;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+li a:hover
+{
+  background-color: #555;
+  color: white;
+}
+
+.about
+{
+	display: flex;
+	flex-direction: column;
+	grid-column: 2/5;
+	justify-content: space-between;
+}
+
+#aboutImage
+{
+  border-radius: 65%;
+  width: 300px;
+  height: 310px;
+  transition: transform 400ms ease-out;
+}
+
+#aboutTitle
+{
+	font-family: shrikhand;
+	font-size: 30px;
+}
+
+#projectImage
+{
+  border-radius: 95%;
+  width: 200px;
+  height: 200px;
+  transition: transform 400ms ease-out;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+}
+
+#projectImage:hover
+{
+  transform: scale(1.15);
+}
+
+#projectTitle
+{
+	font-family: shrikhand;
+	font-size: 26px;
+}
+
+p
+{
+	font-size: 20px;
+}
+
+.project
+{
+	display: flex;
+	flex-direction: column;
+}
+.text
+{
+	grid-column: 2/5;
+	font-size: 15px;
+	font-style: italic;
+}
+
+.footer
+{
+  display: flex;
+  grid-column: 1/-1;
+  justify-content: flex-start;
+}
+
+.fa 
+{
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover 
+{
+    opacity: 0.7;
+}
+
+.fa-linkedin 
+{
+  background: #007bb5;
+  color: white;
+  margin: .2em;
+}
+
+.fa-github
+{
+  margin: .2em;
+}
+
+.fa-instagram 
+{
+  background: #125688;
+  color: white;
+}
+
+.fa-youtube 
+{
+  background: #bb0000;
+  color: white;
+}
+
+.fa-snapchat-ghost 
+{
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
