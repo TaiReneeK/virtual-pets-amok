@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>A Single Item</title>
+</head>
+<body>
+
+	<div th:each="item: ${itemsModel}">
+		<h2 th:text="${item.itemName}"></h2>
+		<img id="" th:src = "${item.itemImage}">
+
+		<div th:each="recipe: ${item.recipes}">
+			<a th:href="@{/recipe(id=${recipe.id})}" th:text="${recipe.recipeName}"></a>
+		</div>
+		
+		<form method="Post">
+			<input name="id" type="hidden" th:value="${item.id}" />
+			<button th:formaction="@{/add-item}">Add Item to Cart</button>
+		</form>
+		
+	</div>
+
+<a href="http://localhost:8080/show-items">Back to Items View</a>
+
+
+</body>
+</html>
